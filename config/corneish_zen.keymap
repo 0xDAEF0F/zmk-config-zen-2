@@ -93,7 +93,7 @@
    &kp TAB   &kp Q        &kp W &kp F      &kp P       &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI     &kp BSPC
    &kp ESC   &gqt LSHFT A &kp R &hm LALT S &hm LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O &kp SQT
    &kp TILDE &kp Z        &kp X &kp C      &kp V       &kp B    &kp K &kp M        &kp COMMA   &kp DOT &kp FSLH     &kp GRAVE
-                        &kp LPAR &lt 1 ENTER  &mt LGUI QMARK    &mt RGUI N0 &lt 2 SPACE &kp LBRC
+                        &kp LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &kp LBRC
                         >;
                 };
                 lower_layer {
