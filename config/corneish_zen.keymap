@@ -65,13 +65,23 @@
         };
         behaviors {
                 hm: homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping-term-ms = <150>;
-                quick-tap-ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+                gqt: global-quick-tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "GLOBAL_QUICK_TAP";
+                        #binding-cells = <2>;
+                        flavor = "tap-preferred";
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <125>;
+                        global-quick-tap;
+                        bindings = <&kp>, <&kp>;
                 };
         };
         keymap {
@@ -80,9 +90,9 @@
                 default_layer {
                         label = "COLEMAK";
                         bindings = <
-   &kp TAB &kp Q  &kp W &kp F      &kp P       &kp G    &kp J &kp L       &kp U      &kp Y   &kp SEMI &kp BSPC
-   &gresc  &kp A  &kp R &hm LALT S &hm LCTRL T &kp D    &kp H &hm RCTRL N &hm RALT E &kp I   &kp O    &kp SQT
-   &trans  &kp Z  &kp X &kp C      &kp V       &kp B    &kp K &kp M       &kp COMMA  &kp DOT &kp FSLH &trans
+   &kp TAB &kp Q        &kp W &kp F      &kp P       &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI     &kp BSPC
+   &gresc  &gqt LSHFT A &kp R &hm LALT S &hm LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O &kp SQT
+   &trans  &kp Z        &kp X &kp C      &kp V       &kp B    &kp K &kp M        &kp COMMA   &kp DOT &kp FSLH     &trans
    &mt LSHFT LEFT_PARENTHESIS &lt 1 ENTER  &mt LGUI QMARK    &mt RGUI N0 &lt 2 SPACE &kp RSHFT
                         >;
                 };
