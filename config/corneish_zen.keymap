@@ -9,6 +9,20 @@
 };
 
 / {
+        macros {
+                alacritty: alacritty {
+                        label = "alacritty";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        wait-ms = <10>;
+                        bindings 
+                        = <&kp LG(SPACE)>
+                        , <&kp A &kp L &kp A &kp C &kp R>
+                        , <&macro_wait_time 100>
+                        , <&kp ENTER>
+                        ;
+                };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -33,9 +47,9 @@
                 raise_layer {
                         label = "SYMBOL";
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &kp F7   &kp F8 &kp F9   &kp F10  &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &kp F11  &kp F11  &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &kp  TAB  &kp EXCL     &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &kp F7       &kp F8 &kp F9   &kp F10  &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &alacritty   &trans &kp F11  &kp F11  &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	   &kp LSHIFT &trans &kp LGUI       &kp RGUI   &trans    &trans
                         >;
                 };
