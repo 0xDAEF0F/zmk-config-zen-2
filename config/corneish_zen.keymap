@@ -82,6 +82,20 @@
                         global-quick-tap;
                         bindings = <&kp>, <&kp>;
                 };
+                tiesc: grave_escape {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "TILDE_ESCAPE";
+                        #binding-cells = <0>;
+                        bindings = <&kp ESC>, <&kp TILDE>;
+                        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+                };
+                tabgrave: tab_grave {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "TAB_GRAVE";
+                        #binding-cells = <0>;
+                        bindings = <&kp TAB>, <&kp GRAVE>;
+                        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -89,8 +103,8 @@
                 default_layer {
                         label = "COLEMAK";
                         bindings = <
-   &kp TAB   &kp Q        &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI      &kp BSPC
-   &kp ESC   &gqt LSHFT A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O  &kp SQT
+   &tabgrave &kp Q        &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI      &kp BSPC
+   &tiesc    &gqt LSHFT A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O  &kp SQT
    &kp TILDE &kp Z        &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA   &kp DOT &kp FSLH      &kp GRAVE
                         &kp LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &kp LBRC
                         >;
