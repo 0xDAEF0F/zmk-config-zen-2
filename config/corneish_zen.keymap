@@ -82,18 +82,11 @@
                         global-quick-tap;
                         bindings = <&kp>, <&kp>;
                 };
-                tiesc: grave_escape {
+                tiesc: tilde_escape {
                         compatible = "zmk,behavior-mod-morph";
                         label = "TILDE_ESCAPE";
                         #binding-cells = <0>;
                         bindings = <&kp ESC>, <&kp TILDE>;
-                        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-                };
-                tabgrave: tab_grave {
-                        compatible = "zmk,behavior-mod-morph";
-                        label = "TAB_GRAVE";
-                        #binding-cells = <0>;
-                        bindings = <&kp TAB>, <&kp GRAVE>;
                         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
                 };
         };
@@ -103,9 +96,9 @@
                 default_layer {
                         label = "COLEMAK";
                         bindings = <
-   &tabgrave &kp Q        &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI      &kp BSPC
-   &tiesc    &gqt LSHFT A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O  &kp SQT
-   &kp TILDE &kp Z        &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA   &kp DOT &kp FSLH      &kp GRAVE
+   &kp TAB &kp Q        &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI      &kp BSPC
+   &tiesc  &gqt LSHFT A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O  &kp SQT
+   &trans  &kp Z        &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA   &kp DOT &kp FSLH      &trans
                         &kp LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &kp LBRC
                         >;
                 };
@@ -121,9 +114,9 @@
                 raise_layer {
                         label = "SYMBOL";
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &trans &kp F1   &kp F2 &kp F3   &kp F4   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &kp GRAVE
-   &trans &trans   &trans &kp F7   &kp F8   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &trans
+   &trans    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp GRAVE &kp F1   &kp F2 &kp F3   &kp F4   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &trans
+   &trans    &trans   &trans &kp F7   &kp F8   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &trans
                        	&kp LSHIFT &trans &kp LGUI       &kp RGUI   &trans    &trans
                         >;
                 };
