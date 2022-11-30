@@ -11,8 +11,8 @@
 / {
         macros {
                 ZMK_MACRO(whatsapp, 
-                        wait-ms = <40>;
-                        tap-ms = <30>;
+                        wait-ms = <20>;
+                        tap-ms = <20>;
                         bindings 
                         = <&kp LG(SPACE)>
                         , <&kp W &kp H &kp A &kp T &kp S>
@@ -21,8 +21,8 @@
                         ;
                 )
                 ZMK_MACRO(alacritty, 
-                        wait-ms = <40>;
-                        tap-ms = <30>;
+                        wait-ms = <20>;
+                        tap-ms = <20>;
                         bindings 
                         = <&kp LG(SPACE)>
                         , <&kp A &kp L &kp A &kp C &kp R>
@@ -31,8 +31,8 @@
                         ;
                 )
                 ZMK_MACRO(firefox, 
-                        wait-ms = <40>;
-                        tap-ms = <30>;
+                        wait-ms = <20>;
+                        tap-ms = <20>;
                         bindings 
                         = <&kp LG(SPACE)>
                         , <&kp F &kp I &kp R &kp E &kp F>
@@ -41,8 +41,8 @@
                         ;
                 )
                 ZMK_MACRO(vscode, 
-                        wait-ms = <40>;
-                        tap-ms = <30>;
+                        wait-ms = <20>;
+                        tap-ms = <20>;
                         bindings 
                         = <&kp LG(SPACE)>
                         , <&kp V &kp I &kp S &kp U &kp A>
@@ -51,8 +51,8 @@
                         ;
                 )
                 ZMK_MACRO(insomnia, 
-                        wait-ms = <40>;
-                        tap-ms = <30>;
+                        wait-ms = <20>;
+                        tap-ms = <20>;
                         bindings 
                         = <&kp LG(SPACE)>
                         , <&kp I &kp N &kp S &kp O &kp M>
@@ -61,8 +61,8 @@
                         ;
                 )
                 ZMK_MACRO(discord, 
-                        wait-ms = <40>;
-                        tap-ms = <30>;
+                        wait-ms = <20>;
+                        tap-ms = <20>;
                         bindings 
                         = <&kp LG(SPACE)>
                         , <&kp D &kp I &kp S &kp C &kp O>
