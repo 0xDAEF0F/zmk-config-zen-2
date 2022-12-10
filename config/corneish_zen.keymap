@@ -99,15 +99,15 @@
    &kp TAB &kp Q        &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U       &kp Y   &kp SEMI      &kp BSPC
    &tiesc  &gqt LSHFT A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &gqt RCTRL N &gqt RALT E &kp I   &gqt RSHFT O  &kp SQT
    &trans  &kp Z        &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA   &kp DOT &kp FSLH      &trans
-                        &kp LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &kp LBRC
+                     &mt LSHFT LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &mt RSHFT LBRC
                         >;
                 };
                 lower_layer {
                         label = "NUMBER";
                         bindings = <
-   &kp TAB   &kp N1                   &kp N2   &kp N3  &kp N4    &kp N5     &kp N6     &kp N7            &kp N8          &kp N9     &kp N0           &kp BSPC
-   &whatsapp &alacritty               &firefox &vscode &insomnia &discord   &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT  &kp C_PLAY_PAUSE &trans
-   &trans    &kp LG(LC(LS(NUMBER_4))) &trans   &kp F5  &kp F6    &trans     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_NEXT &trans           &trans
+   &kp TAB   &kp N1                   &kp N2   &kp N3  &kp N4    &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
+   &whatsapp &alacritty               &firefox &vscode &insomnia &discord   &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &trans
+   &trans    &kp LG(LC(LS(NUMBER_4))) &trans   &kp F5  &kp F6    &trans     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &trans
                                            &trans &trans &mt LGUI N0     &kp RGUI &trans &trans
                         >;
                 };
