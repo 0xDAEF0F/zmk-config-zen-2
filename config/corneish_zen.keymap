@@ -12,9 +12,14 @@
         combos {
                 compatible = "zmk,combos";
                 combo_qwerty {
-                        timeout-ms = <100>; // next 75
-                        key-positions = <19 20 21>;
+                        timeout-ms = <50>;
+                        key-positions = <19 20>;
                         bindings = <&tog 3>;
+                };
+                combo_escape {
+                        timeout-ms = <50>;
+                        key-positions = <15 16>;
+                        bindings = <&kp ESC>;
                 };
         };
 };
@@ -134,10 +139,10 @@
                 qwerty_layer {
                         label = "QWERTY";
                         bindings = <
-   &none &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I &kp O &kp P &tog 3
-   &none &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K &kp L &none &none
-   &none &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &none &none &none &none
-                    &none &none &none    &none &none &none
+   &none &kp Q &kp W &kp F &kp P &kp G    &kp J &kp L &kp U &kp Y &kp SEMI &tog 3
+   &none &kp A &kp R &kp S &kp T &kp D    &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+   &none &kp Z &kp X &kp C &kp V &kp B    &kp M &kp COMMA &kp DOT &kp FSLH &none &none
+                 &none &kp ENTER &none    &none &kp SPACE &none
                         >;
                 };
         };
