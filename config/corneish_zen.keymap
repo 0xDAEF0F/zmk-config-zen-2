@@ -136,13 +136,13 @@
                        	&kp LSHIFT &trans &kp LGUI       &kp RGUI   &trans    &trans
                         >;
                 };
-                qwerty_layer {
-                        label = "QWERTY";
+                extended_layer {
+                        label = "EXTENDED";
                         bindings = <
-   &none &kp Q &kp W &kp F &kp P &kp G    &kp HOME &kp PG_DN     &kp PG_UP        &kp Y &kp SEMI &tog 3
-   &none &kp A &kp R &kp S &kp T &kp D    &kp LEFT &kp DOWN      &kp UP           &kp RIGHT &none &none
-   &none &kp Z &kp X &kp C &kp V &kp B    &kp END  &kp C_AC_BACK &kp C_AC_FORWARD &kp FSLH &none &none
-                 &none &kp ENTER &none    &none &kp SPACE &none
+   &none &kp Q &kp W &kp F &kp P &kp G    &kp LG(LEFT)    &kp PG_DN &kp PG_UP &kp LG(RIGHT) &kp SEMI &tog 3
+   &none &kp A &kp R &kp S &kp T &kp D    &kp LEFT        &kp DOWN  &kp UP    &kp RIGHT     &none    &none
+   &none &kp Z &kp X &kp C &kp V &kp B    &kp LC(LS(TAB)) &kp END   &kp HOME  &kp LC(TAB)   &none    &none
+                 &none &kp ENTER &none    &none &kp SPACE &tog 3
                         >;
                 };
         };
