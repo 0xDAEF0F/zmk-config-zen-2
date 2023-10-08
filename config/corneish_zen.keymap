@@ -30,6 +30,26 @@
                         , <&kp ENTER>
                         ;
                 )
+                ZMK_MACRO(spoti, 
+                        wait-ms = <20>;
+                        tap-ms = <30>;
+                        bindings 
+                        = <&kp LG(SPACE)>
+                        , <&kp S &kp P &kp O &kp T &kp I>
+                        , <&macro_wait_time 120>
+                        , <&kp ENTER>
+                        ;
+                )
+                ZMK_MACRO(slack, 
+                        wait-ms = <20>;
+                        tap-ms = <30>;
+                        bindings 
+                        = <&kp LG(SPACE)>
+                        , <&kp S &kp L &kp A &kp C &kp K>
+                        , <&macro_wait_time 120>
+                        , <&kp ENTER>
+                        ;
+                )
         };
         behaviors {
                 gqt: global-quick-tap {
@@ -65,9 +85,9 @@
                 lower_layer {
                         label = "NUMBER";
                         bindings = <
-   &kp TAB &kp N1                   &kp N2 &kp N3   &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
-   &trans  &trans                   &trans &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &trans
-   &trans  &kp LG(LC(LS(NUMBER_4))) &kp F1 &kp F2   &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &trans
+   &kp TAB &kp N1                   &kp N2 &kp N3  &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
+   &trans  &slack                   &spoti &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &trans
+   &trans  &kp LG(LC(LS(NUMBER_4))) &kp F1 &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &trans
                                            &trans &trans &mt LGUI N0     &kp RGUI &trans &trans
                         >;
                 };
