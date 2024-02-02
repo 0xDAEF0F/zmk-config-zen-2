@@ -86,7 +86,7 @@
                         label = "NUMBER";
                         bindings = <
    &kp TAB &kp N1                   &kp N2 &kp N3  &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
-   &trans  &slack                   &spoti &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &trans
+   &tog 3  &slack                   &spoti &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &trans
    &trans  &kp LG(LC(LS(NUMBER_4))) &kp F1 &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &trans
                                            &trans &trans &mt LGUI N0     &kp RGUI &trans &trans
                         >;
@@ -98,6 +98,24 @@
    &kp GRAVE &trans   &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &trans
    &trans    &trans   &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &trans
                        	&kp LSHIFT &trans &kp LGUI       &kp RGUI   &trans    &trans
+                        >;
+                };
+                tibia_base_layer {
+                        label = "TIBIA_ONE";
+                        bindings = <
+   &trans &kp F4 &kp KP_N7 &kp UP   &kp KP_N9 &trans    &trans &trans &trans &trans &trans &tog 3
+   &kp F6 &kp F1 &kp LEFT  &kp DOWN &kp RIGHT &kp F3    &trans &trans &trans &trans &trans &trans
+   &trans &kp F2 &kp KP_N1 &trans   &kp KP_N3 &trans    &trans &trans &trans &trans &trans &trans
+              	            &kp LSHFT &kp LGUI &mo 4    &trans &trans &trans
+                        >;
+                };
+                tibia_spell_layer {
+                        label = "TIBIA_TWO";
+                        bindings = <
+   &trans &kp F9 &kp F10 &kp F11 &kp F12 &trans    &trans &trans &trans &trans &trans &trans
+   &trans &kp F1 &kp F2  &kp F3  &kp F4  &trans    &trans &trans &trans &trans &trans &trans
+   &trans &kp F5 &kp F6  &kp F7  &kp F8  &trans    &trans &trans &trans &trans &trans &trans
+              	           &trans &trans &trans    &trans &trans &trans
                         >;
                 };
         };
