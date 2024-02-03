@@ -101,16 +101,16 @@
                         >;
                 };
                 tibia_base_layer {
-                        label = "TIBIA_ONE";
+                        label = "TIBIA1";
                         bindings = <
-   &trans &kp F4 &kp KP_N7 &kp UP   &kp KP_N9 &trans    &trans &trans &trans &trans &trans &tog 3
-   &kp F6 &kp F1 &kp LEFT  &kp DOWN &kp RIGHT &kp F3    &trans &trans &trans &trans &trans &trans
-   &trans &kp F2 &kp KP_N1 &trans   &kp KP_N3 &trans    &trans &trans &trans &trans &trans &trans
-              	            &kp LSHFT &kp LGUI &mo 4    &trans &trans &trans
+   &trans  &trans  &kp F19  &kp UP   &kp F18   &trans    &trans &trans &trans &trans &trans &tog 3
+   &kp ESC &kp F1  &kp LEFT &kp DOWN &kp RIGHT &kp F14   &trans &trans &trans &trans &trans &trans
+   &tog 3  &kp F13 &kp F17  &kp F16  &kp F15   &trans    &trans &trans &trans &trans &trans &trans
+              	            &kp LGUI &mo 4 &kp LSHFT    &trans &trans &trans
                         >;
                 };
                 tibia_spell_layer {
-                        label = "TIBIA_TWO";
+                        label = "TIBIA2";
                         bindings = <
    &trans &kp F9 &kp F10 &kp F11 &kp F12 &trans    &trans &trans &trans &trans &trans &trans
    &trans &kp F1 &kp F2  &kp F3  &kp F4  &trans    &trans &trans &trans &trans &trans &trans
