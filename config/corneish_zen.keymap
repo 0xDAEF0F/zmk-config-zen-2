@@ -103,10 +103,10 @@
                 tibia_base_layer {
                         label = "TIBIA1";
                         bindings = <
-   &trans  &trans  &kp F19  &kp UP   &kp F18   &trans    &trans &trans &trans &trans &trans &tog 3
-   &kp ESC &kp F1  &kp LEFT &kp DOWN &kp RIGHT &kp F14   &trans &trans &trans &trans &trans &trans
-   &tog 3  &kp F13 &kp F17  &kp F16  &kp F15   &trans    &trans &trans &trans &trans &trans &trans
-              	            &kp LGUI &mo 4 &kp LSHFT    &trans &trans &trans
+   &trans  &kp Q  &kp W &kp F &kp P &kp G     &trans &trans &trans &trans &trans &tog 3
+   &kp ESC &kp A  &kp R &kp S &kp T &kp D     &trans &trans &trans &trans &trans &trans
+   &tog 3  &kp Z  &kp X &kp C &kp V &kp B     &trans &trans &trans &trans &trans &trans
+                 &kp LGUI &mo 4 &kp LSHFT   &trans &trans &trans
                         >;
                 };
                 tibia_spell_layer {
