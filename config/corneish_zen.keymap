@@ -51,6 +51,15 @@
                         ;
                 )
         };
+        combos {
+                compatible = "zmk,combos";
+                combo_ne {
+                        timeout-ms = <1000>;
+                        key-positions = <3 16>;
+                        layers = <3>;
+                        bindings = <&kp P>;
+                };
+        };
         behaviors {
                 gqt: global-quick-tap {
                         compatible = "zmk,behavior-hold-tap";
