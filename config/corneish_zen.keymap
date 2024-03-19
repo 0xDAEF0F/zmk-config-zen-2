@@ -95,9 +95,9 @@
                         label = "NUMBER";
                         bindings = <
    &kp TAB &kp N1                   &kp N2 &kp N3  &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
-   &tog 3  &slack                   &spoti &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &trans
-   &trans  &kp LG(LC(LS(NUMBER_4))) &kp F1 &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &trans
-                                           &trans &trans &mt LGUI N0     &kp RGUI &trans &trans
+   &tog 3  &slack                   &spoti &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &bt BT_NXT
+   &none   &kp LG(LC(LS(NUMBER_4))) &kp F1 &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &bt BT_PRV
+                                           &trans &trans &mt LGUI N0         &kp RGUI &trans &trans
                         >;
                 };
                 raise_layer {
