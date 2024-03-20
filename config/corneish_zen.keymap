@@ -51,15 +51,6 @@
                         ;
                 )
         };
-        combos {
-                compatible = "zmk,combos";
-                combo_ne {
-                        timeout-ms = <1000>;
-                        key-positions = <3 16>;
-                        layers = <3>;
-                        bindings = <&kp P>;
-                };
-        };
         behaviors {
                 gqt: global-quick-tap {
                         compatible = "zmk,behavior-hold-tap";
@@ -109,17 +100,17 @@
                        	&kp LSHIFT &trans &kp LGUI       &kp RGUI   &trans    &trans
                         >;
                 };
-                tibia_base_layer {
-                        label = "TIBIA1";
+                game_base_layer {
+                        label = "GAME1";
                         bindings = <
-   &trans  &kp Q  &kp W &kp F &kp P &kp G     &trans &trans &trans &trans &trans &tog 3
-   &kp ESC &kp A  &kp R &kp S &kp T &kp D     &trans &trans &trans &trans &trans &trans
-   &tog 3  &kp Z  &kp X &kp C &kp V &kp B     &trans &trans &trans &trans &trans &trans
-                 &kp LGUI &mo 4 &kp LSHFT   &trans &trans &trans
+   &kp TAB &kp Q  &kp W &kp E       &kp R        &kp T     &trans &trans &trans &trans &trans &tog 3
+   &kp ESC &kp A  &kp S &kp D       &kp F        &kp G     &trans &trans &trans &trans &trans &trans
+   &tog 3  &kp Z  &kp X &gqt LALT C &gqt LCTRL V &kp B     &trans &trans &trans &trans &trans &trans
+                             &kp LSHFT &mo 4 &kp LCTRL     &trans &trans &trans
                         >;
                 };
-                tibia_spell_layer {
-                        label = "TIBIA2";
+                game_alt_layer {
+                        label = "GAME2";
                         bindings = <
    &trans &kp F9 &kp F10 &kp F11 &kp F12 &trans    &trans &trans &trans &trans &trans &trans
    &trans &kp F1 &kp F2  &kp F3  &kp F4  &trans    &trans &trans &trans &trans &trans &trans
