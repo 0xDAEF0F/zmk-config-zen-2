@@ -30,22 +30,22 @@
                         , <&kp ENTER>
                         ;
                 )
-                ZMK_MACRO(spoti, 
+                ZMK_MACRO(vscode, 
                         wait-ms = <20>;
                         tap-ms = <30>;
                         bindings 
                         = <&kp LG(SPACE)>
-                        , <&kp S &kp P &kp O &kp T &kp I>
+                        , <&kp V &kp I &kp S &kp U &kp A>
                         , <&macro_wait_time 120>
                         , <&kp ENTER>
                         ;
                 )
-                ZMK_MACRO(slack, 
+                ZMK_MACRO(cursor, 
                         wait-ms = <20>;
                         tap-ms = <30>;
                         bindings 
                         = <&kp LG(SPACE)>
-                        , <&kp S &kp L &kp A &kp C &kp K>
+                        , <&kp C &kp U &kp R &kp S &kp O>
                         , <&macro_wait_time 120>
                         , <&kp ENTER>
                         ;
@@ -85,10 +85,10 @@
                 lower_layer {
                         label = "NUMBER";
                         bindings = <
-   &kp TAB &kp N1                   &kp N2 &kp N3  &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
-   &tog 3  &slack                   &spoti &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &bt BT_NXT
-   &none   &kp LG(LC(LS(NUMBER_4))) &kp F1 &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &bt BT_PRV
-                                           &trans &trans &mt LGUI N0         &kp RGUI &trans &trans
+   &kp TAB &kp N1                   &kp N2  &kp N3  &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp BSPC
+   &none   &cursor                  &vscode &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp C_PLAY_PAUSE &bt BT_NXT
+   &none   &kp LG(LC(LS(NUMBER_4))) &kp F1  &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &bt BT_PRV
+                                            &trans &trans &mt LGUI N0         &kp RGUI &trans &trans
                         >;
                 };
                 raise_layer {
@@ -98,24 +98,6 @@
    &kp GRAVE &trans   &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &trans
    &trans    &trans   &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &trans
                        	&kp LSHIFT &trans &kp LGUI       &kp RGUI   &trans    &trans
-                        >;
-                };
-                game_base_layer {
-                        label = "GAME1";
-                        bindings = <
-   &kp TAB &kp Q  &kp W &kp E       &kp R        &kp T     &trans &trans &trans &trans &trans &tog 3
-   &kp ESC &kp A  &kp S &kp D       &kp F        &kp G     &trans &trans &trans &trans &trans &trans
-   &tog 3  &kp Z  &kp X &gqt LALT C &gqt LCTRL V &kp B     &trans &trans &trans &trans &trans &trans
-                             &kp LSHFT &mo 4 &kp LCTRL     &trans &trans &trans
-                        >;
-                };
-                game_alt_layer {
-                        label = "GAME2";
-                        bindings = <
-   &trans &kp F9 &kp F10 &kp F11 &kp F12 &trans    &trans &trans &trans &trans &trans &trans
-   &trans &kp F1 &kp F2  &kp F3  &kp F4  &trans    &trans &trans &trans &trans &trans &trans
-   &trans &kp F5 &kp F6  &kp F7  &kp F8  &trans    &trans &trans &trans &trans &trans &trans
-              	           &trans &trans &trans    &trans &trans &trans
                         >;
                 };
         };
