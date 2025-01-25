@@ -66,7 +66,7 @@
                 default_layer {
                         label = "COLEMAK";
                         bindings = <
-   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SEMI &kp BSPC
+   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SEMI &none
    &tiesc      &kp A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &kp N &kp E  &gqt RCTRL I &gqt RALT O &kp SQT
    &kp LG(TAB) &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &kp FSLH &kp LG(TAB)
                      &mt LSHFT LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &mt RSHFT LBRC
@@ -75,10 +75,10 @@
                 lower_layer {
                         label = "NUMBER";
                         bindings = <
-   &none &kp N1                     &kp N2  &kp N3  &kp N4      &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0           &kp C_PLAY_PAUSE
-   &tog 3  &kp TAB                  &vscode &chrome &alacritty  &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp BSPC &bt BT_NXT
-   &none   &kp LG(LC(LS(NUMBER_4))) &kp F1  &kp F2  &kp F3      &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT       &bt BT_PRV
-                                    &none &none &mt LGUI N0         &kp RGUI &trans &trans
+   &none &kp N1                     &kp N2  &kp N3  &kp N4     &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &kp N0     &kp C_PLAY_PAUSE
+   &tog 3  &kp TAB                  &vscode &chrome &alacritty &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp COLON      &bt BT_NXT
+   &none   &kp LG(LC(LS(NUMBER_4))) &kp F1  &kp F2  &kp F3     &kp F4     &kp C_PREV &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &kp C_NEXT &bt BT_PRV
+                                    &none &none &mt LGUI N0    &kp RGUI &kp BSPC &trans
                         >;
                 };
                 raise_layer {
@@ -87,7 +87,7 @@
    &trans &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &none  &kp GRAVE &kp FSLH &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &trans
    &trans &trans    &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &trans
-                       	&kp LSHIFT &kp COLON &kp LGUI       &kp RGUI   &trans    &trans
+                       	&kp LSHIFT &kp BSPC &kp LGUI       &kp RGUI   &trans    &trans
                         >;
                 };
                 game_base_layer {
