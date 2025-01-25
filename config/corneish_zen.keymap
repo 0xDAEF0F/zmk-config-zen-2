@@ -66,7 +66,7 @@
                 default_layer {
                         label = "COLEMAK";
                         bindings = <
-   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SEMI &none
+   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SEMI &kp LG(BSPC)
    &tiesc      &kp A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &kp N &kp E  &gqt RCTRL I &gqt RALT O &kp SQT
    &kp LG(TAB) &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &kp FSLH &kp LG(TAB)
                      &mt LSHFT LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &mt RSHFT LBRC
@@ -87,7 +87,7 @@
    &trans &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &none  &kp GRAVE &kp FSLH &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &trans
    &trans &trans    &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &trans
-                       	&kp LSHIFT &kp BSPC &kp LGUI       &kp RGUI   &trans    &trans
+                       	&kp LSHIFT &kp BSPC &kp LGUI       &kp RGUI   &none &none
                         >;
                 };
                 game_base_layer {
