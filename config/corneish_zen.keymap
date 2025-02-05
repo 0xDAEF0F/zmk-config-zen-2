@@ -43,7 +43,7 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <100>;
-                        bindings = <&kp N>, <&to 1>;
+                        bindings = <&kp N>, <&kp N2>;
                 };
         };
         keymap {
