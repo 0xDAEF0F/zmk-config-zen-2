@@ -42,7 +42,7 @@
                 td0: tap_dance_0 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <250>;
+                        tapping-term-ms = <300>;
                         bindings = <&kp N>, <&to 1>;
                 };
         };
@@ -52,8 +52,8 @@
                 default_layer {
                         label = "COLEMAK";
                         bindings = <
-   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SEMI &kp LG(BSPC)
-   &tiesc      &kp A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &td0 &kp E  &gqt RCTRL I &gqt RALT O &kp SQT
+   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SEMI &kp BSPC
+   &tiesc      &kp A &kp R &gqt LALT S &gqt LCTRL T &kp D    &kp H &kp N &kp E  &gqt RCTRL I &gqt RALT O &kp SQT
    &kp LG(TAB)  &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &kp FSLH &none
                      &mt LSHFT LPAR &lt 1 ENTER  &mt LGUI N0    &mt RGUI QMARK &lt 2 SPACE &mt RSHFT LBRC
                         >;
