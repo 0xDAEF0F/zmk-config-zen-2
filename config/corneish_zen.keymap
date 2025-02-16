@@ -9,18 +9,6 @@
 };
 
 / {
-        macros {
-                ZMK_MACRO(alacritty, 
-                        wait-ms = <20>;
-                        tap-ms = <30>;
-                        bindings 
-                        = <&kp LG(SPACE)>
-                        , <&kp A &kp L &kp A &kp C &kp R>
-                        , <&macro_wait_time 120>
-                        , <&kp ENTER>
-                        ;
-                )
-        };
         behaviors {
                 gqt: global-quick-tap {
                         compatible = "zmk,behavior-hold-tap";
@@ -39,59 +27,35 @@
                         bindings = <&kp ESC>, <&kp TILDE>;
                         mods = <(MOD_RGUI)>;
                 };
-                td0: tap_dance_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <300>;
-                        bindings = <&kp N>, <&to 1>;
-                };
         };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "COLEMAK";
+                        label = "Base";
                         bindings = <
-   &kp TAB     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &none &kp BSPC
+   &none     &kp Q &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &none &none
    &tiesc      &kp A &gqt LALT R &gqt LCTRL S &gqt LGUI T &kp D    &kp H &gqt RGUI N &gqt RCTRL E  &gqt RALT I &kp O &kp SQT
    &kp LG(TAB)  &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &none &none
-                     &mt LSHFT LPAR &lt 1 ENTER  &kp LGUI    &tog 1 &lt 2 SPACE &mt RSHFT LBRC
+                     &mt LSHFT LPAR &lt 1 ENTER  &kp TAB    &kp BSPC &lt 2 SPACE &mt RSHFT LBRC
                         >;
                 };
                 lower_layer {
-                        label = "NUMBER";
+                        label = "Num";
                         bindings = <
-   &none &none                       &kp N2  &kp N3  &kp N4     &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &none     &kp C_PLAY_PAUSE
-   &tog 3  &kp TAB                   &kp F3 &kp F2 &kp F1 &trans     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp COLON      &bt BT_NXT
-   &none    &kp LG(LC(LS(NUMBER_4))) &none  &kp F5  &kp F4     &kp F4     &kp C_PREV &kp LS(LA(C_VOLUME_DOWN)) &kp LS(LA(C_VOLUME_UP)) &kp DOT   &kp C_NEXT &bt BT_PRV
-                                     &none &none &none    &trans &kp BSPC &to 0
+   &none &none                       &kp N2  &kp N3  &kp N4  &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &none     &kp C_PLAY_PAUSE
+   &none  &kp TAB                   &kp F3 &kp F2 &kp F1 &kp N0     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp COLON      &bt BT_NXT
+   &none    &kp LG(LC(LS(NUMBER_4))) &none  &kp F5  &kp F4 &kp N1     &kp C_PREV &kp LS(LA(C_VOLUME_DOWN)) &kp LS(LA(C_VOLUME_UP)) &kp DOT   &kp C_NEXT &bt BT_PRV
+                                     &none &none &none    &none &kp BSPC &none
                         >;
                 };
                 raise_layer {
-                        label = "SYMBOL";
+                        label = "Symb";
                         bindings = <
    &trans &none  &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &none  &kp GRAVE &kp FSLH &kp SEMI   &kp N0   &kp N1       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &trans
    &trans &trans    &kp BSLH &kp QMARK   &kp UNDER   &kp EXCL       &none &kp PLUS  &kp LBRC        &kp RBRC &none &none
                                &none &kp BSPC &none       &none &none &none
-                        >;
-                };
-                game_base_layer {
-                        label = "GAME1";
-                        bindings = <
-   &kp TAB &kp Q  &kp W &kp E       &kp R        &kp T     &none &none &none &none &none &tog 3
-   &kp ESC &kp A  &kp S &kp D       &kp F        &kp G     &none &none &none &none &none &none
-   &tog 3  &kp Z  &kp X &gqt LALT C &gqt LCTRL V &kp B     &none &none &none &none &none &none
-                             &kp LSHFT &mo 4 &kp LCTRL     &none &none &none
-                        >;
-                };
-                game_alt_layer {
-                        label = "GAME2";
-                        bindings = <
-   &none &kp F9 &kp F10 &kp F11 &kp F12 &none    &none &none &none &none &none &none
-   &none &kp F1 &kp F2  &kp F3  &kp F4  &none    &none &none &none &none &none &none
-   &none &kp F5 &kp F6  &kp F7  &kp F8  &none    &none &none &none &none &none &none
-                                 &none &none &none    &none &none &none
                         >;
                 };
         };
