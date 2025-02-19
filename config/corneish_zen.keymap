@@ -27,6 +27,13 @@
                         bindings = <&kp ESC>, <&kp TILDE>;
                         mods = <(MOD_RGUI)>;
                 };
+                // one_other: one_other {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         label = "ONE_OTHER";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp N1>, <&none>;
+                //         mods = <(MOD_LGUI)>;
+                // };
                 tdq: tap_dance_q_0 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
