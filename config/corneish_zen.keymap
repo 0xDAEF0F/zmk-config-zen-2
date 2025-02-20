@@ -38,7 +38,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         label = "CMD_O";
                         #binding-cells = <0>;
-                        bindings = <&kp O>, <&kp SQT>;
+                        bindings = <&kp O>, <&kp DQT>;
                         mods = <(MOD_LGUI|MOD_RGUI)>;
                 };
                 tdq: tap_dance_q_0 {
@@ -54,8 +54,8 @@
                 default_layer {
                         label = "Base";
                         bindings = <
-   &none     &none &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &kp SQT &none
-   &tiesc      &kp A &gqt LALT R &gqt LCTRL S &gqt LGUI T &kp D    &kp H &gqt RGUI N &gqt RCTRL E  &gqt RALT I &cmdo &none
+   &none     &none &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &none &none
+   &tiesc      &kp A &gqt LALT R &gqt LCTRL S &gqt LGUI T &kp D    &kp H &gqt RGUI N &gqt RCTRL E  &gqt RALT I &cmdo &kp SQT
    &kp LG(TAB)  &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &none &none
                      &mt LSHFT LPAR &lt 1 ENTER  &sicko_mode    &kp N1 &lt 2 SPACE &mt RSHFT LBRC
                         >;
