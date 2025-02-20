@@ -27,13 +27,13 @@
                         bindings = <&kp ESC>, <&kp TILDE>;
                         mods = <(MOD_RGUI)>;
                 };
-                // one_other: one_other {
-                //         compatible = "zmk,behavior-mod-morph";
-                //         label = "ONE_OTHER";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp N1>, <&none>;
-                //         mods = <(MOD_LGUI)>;
-                // };
+                sicko_mode: sicko_mode {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "ONE_OTHER";
+                        #binding-cells = <0>;
+                        bindings = <&tdq>, <&kp LG(V)>;
+                        mods = <(MOD_LGUI)>;
+                };
                 tdq: tap_dance_q_0 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
@@ -50,7 +50,7 @@
    &none     &none &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &none &none
    &tiesc      &kp A &gqt LALT R &gqt LCTRL S &gqt LGUI T &kp D    &kp H &gqt RGUI N &gqt RCTRL E  &gqt RALT I &kp O &kp SQT
    &kp LG(TAB)  &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &none &none
-                     &mt LSHFT LPAR &lt 1 ENTER  &tdq    &kp N1 &lt 2 SPACE &mt RSHFT LBRC
+                     &mt LSHFT LPAR &lt 1 ENTER  &sicko_mode    &kp N1 &lt 2 SPACE &mt RSHFT LBRC
                         >;
                 };
                 lower_layer {
