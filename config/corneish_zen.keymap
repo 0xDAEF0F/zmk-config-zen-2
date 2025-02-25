@@ -57,7 +57,7 @@
    &none     &none &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &none &kp BSPC
    &tiesc      &kp A &gqt LALT R &gqt LCTRL S &gqt LGUI T &kp D    &kp H &gqt RGUI N &gqt RCTRL E  &gqt RALT I &cmdo &kp SQT
    &kp LG(TAB)  &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &none &none
-                     &mt LSHFT LPAR &lt 1 SPACE  &gqt LGUI Q    &kp ENTER &lt 2 BSPC &mt RSHFT LBRC
+                     &mt LSHFT LPAR &lt 1 BSCP &gqt LGUI Q    &kp ENTER &lt 2 SPACE &mt RSHFT LBRC
                         >;
                 };
                 num_layer {
