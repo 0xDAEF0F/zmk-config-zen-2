@@ -3,80 +3,87 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        chosen {
-                zmk,matrix_transform = &default_transform;
-        };
+    chosen {
+        zmk,matrix_transform = &default_transform;
+    };
 };
 
 / {
-        behaviors {
-                gqt: global-quick-tap {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "GLOBAL_QUICK_TAP";
-                        #binding-cells = <2>;
-                        flavor = "tap-preferred";
-                        tapping-term-ms = <180>;
-                        quick-tap-ms = <125>;
-                        global-quick-tap;
-                        bindings = <&kp>, <&kp>;
-                };
-                tiesc: tilde_escape {
-                        compatible = "zmk,behavior-mod-morph";
-                        label = "TILDE_ESCAPE";
-                        #binding-cells = <0>;
-                        bindings = <&kp ESC>, <&kp TILDE>;
-                        mods = <(MOD_RGUI)>;
-                };
-                sicko_mode: sicko_mode {
-                        compatible = "zmk,behavior-mod-morph";
-                        label = "ONE_OTHER";
-                        #binding-cells = <0>;
-                        bindings = <&tdq>, <&kp LG(V)>;
-                        mods = <(MOD_LGUI)>;
-                };
-                cmdo: cmdo {
-                        compatible = "zmk,behavior-mod-morph";
-                        label = "CMD_O";
-                        #binding-cells = <0>;
-                        bindings = <&kp O>, <&kp DQT>;
-                        mods = <(MOD_LGUI|MOD_RGUI)>;
-                };
-                tdq: tap_dance_q_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <300>;
-                        bindings = <&kp Q>, <&kp N0>;
-                };
+    behaviors {
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
         };
-        keymap {
-                compatible = "zmk,keymap";
 
-                default_layer {
-                        label = "Base";
-                        bindings = <
-   &none     &none &kp W &kp F       &kp P        &kp G    &kp J &kp L        &kp U        &kp Y       &none &kp BSPC
-   &tiesc      &kp A &gqt LALT R &gqt LCTRL S &gqt LGUI T &kp D    &kp H &gqt RGUI N &gqt RCTRL E  &gqt RALT I &cmdo &kp SQT
-   &kp LG(TAB) &kp Z &kp X &kp C       &kp V        &kp B    &kp K &kp M        &kp COMMA    &kp DOT     &none &kp LG(TAB)
-                     &mt LSHFT TAB &lt 1 ENTER &gqt LGUI Q    &none &lt 2 SPACE &mt RSHFT LBRC
-                        >;
-                };
-                num_layer {
-                        label = "Num";
-                        bindings = <
-   &none &none                       &kp N2  &kp N3  &kp N4  &kp N5     &kp N6     &kp N7            &kp N8          &kp N9    &none     &kp C_PLAY_PAUSE
-   &none  &kp GRAVE                    &kp F3 &kp F2 &kp F1 &none     &kp LEFT   &kp DOWN          &kp UP          &kp RIGHT &kp COLON      &none
-   &none    &kp LG(LC(LS(NUMBER_4))) &none  &kp F5  &kp F4 &kp LS(LA(C_VOLUME_DOWN))     &kp LS(LA(C_VOLUME_UP)) &kp N1 &kp N0 &kp DOT   &kp C_NEXT &none
-                                     &none &none &none    &none &kp BSPC &none
-                        >;
-                };
-                symb_layer {
-                        label = "Symb";
-                        bindings = <
-   &trans &none  &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp PIPE &none &none
-   &none  &kp LPAR &kp FSLH &kp QMARK &kp SEMI &none       &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp RPAR &none
-   &trans &trans  &kp BSLH &kp EXCL  &kp UNDER  &none       &none &kp PLUS  &kp LBKT &kp RBKT &none &none
-                               &none &kp BSPC &none       &none &none &none
-                        >;
-                };
+        tiesc: tilde_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp TILDE>;
+            mods = <(MOD_RGUI)>;
         };
+
+        sicko_mode: sicko_mode {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ONE_OTHER";
+            #binding-cells = <0>;
+            bindings = <&tdq>, <&kp LG(V)>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        cmdo: cmdo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_O";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&kp DQT>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        tdq: tap_dance_q_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp Q>, <&kp N0>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "Base";
+            bindings = <
+                &none        &none  &kp W        &kp F         &kp P         &kp G         &kp J  &kp L         &kp U         &kp Y         &none  &kp BSPC
+                &tiesc       &kp A  &gqt LALT R  &gqt LCTRL S  &gqt LGUI T   &kp D         &kp H  &gqt RGUI N   &gqt RCTRL E  &gqt RALT I   &cmdo  &kp SQT
+                &kp LG(TAB)  &kp Z  &kp X        &kp C         &kp V         &kp B         &kp K  &kp M         &kp COMMA     &kp DOT       &none  &kp LG(TAB)
+                                    &mt LSHFT TAB &lt 1 ENTER   &gqt LGUI Q   &none         &lt 2 SPACE  &mt RSHFT LBRC
+            >;
+        };
+
+        num_layer {
+            label = "Num";
+            bindings = <
+                &none  &none                    &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6                  &kp N7    &kp N8    &kp N9    &none      &kp C_PLAY_PAUSE
+                &none  &kp GRAVE                &kp F3  &kp F2  &kp F1  &none                     &kp LEFT                &kp DOWN  &kp UP    &kp RIGHT &kp COLON  &none
+                &none  &kp LG(LC(LS(NUMBER_4))) &none   &kp F5  &kp F4  &kp LS(LA(C_VOLUME_DOWN)) &kp LS(LA(C_VOLUME_UP)) &kp N1    &kp N0    &kp DOT   &kp C_NEXT &none
+                                                &none   &none   &none   &none                     &none                &none
+            >;
+        };
+
+        symb_layer {
+            label = "Symb";
+            bindings = <
+                &trans  &none    &kp AT    &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS       &kp KP_MULTIPLY  &kp PIPE  &none  &none
+                &none   &kp LPAR &kp FSLH  &kp QMARK &kp SEMI   &none        &kp MINUS  &kp EQUAL      &kp LBRC         &kp RBRC  &kp RPAR  &none
+                &trans  &trans   &kp BSLH  &kp EXCL  &kp UNDER  &none        &none      &kp PLUS       &kp LBKT         &kp RBKT  &none  &none
+                                 &none     &none  &none      &none        &none      &none
+            >;
+        };
+    };
 };
