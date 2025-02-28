@@ -10,10 +10,10 @@
 
 / {
     behaviors {
-        gqt: homerow_mods {
+        hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -59,9 +59,9 @@
             label = "Base";
             bindings = <
                 &none        &none  &kp W        &kp F         &kp P         &kp G         &kp J         &kp L         &kp U         &kp Y         &none         &kp BSPC
-                &tiesc       &kp A  &gqt LALT R  &gqt LCTRL S  &gqt LGUI T   &kp D         &kp H         &gqt RGUI N   &gqt RCTRL E  &gqt RALT I   &cmdo         &kp SQT
+                &tiesc       &kp A  &hm LALT R  &hm LCTRL S  &hm LGUI T   &kp D         &kp H         &hm RGUI N   &hm RCTRL E  &hm RALT I   &cmdo         &kp SQT
                 &kp LG(TAB)  &kp Z  &kp X        &kp C         &kp V         &kp B         &kp K         &kp M         &kp COMMA     &kp DOT       &none         &kp LG(TAB)
-                                           &mt LSHFT TAB &lt 1 ENTER  &gqt LGUI Q         &kp BSPC &lt 2 SPACE &mt RSHFT LBRC
+                                           &mt LSHFT TAB &lt 1 ENTER  &hm LGUI Q         &kp BSPC &lt 2 SPACE &mt RSHFT LBRC
             >;
         };
 
