@@ -10,20 +10,17 @@
 
 / {
     behaviors {
-        gqt: global-quick-tap {
+        gqt: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
             #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
 
         tiesc: tilde_escape {
             compatible = "zmk,behavior-mod-morph";
-            label = "TILDE_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp TILDE>;
             mods = <(MOD_RGUI)>;
@@ -31,7 +28,6 @@
 
         sicko_mode: sicko_mode {
             compatible = "zmk,behavior-mod-morph";
-            label = "ONE_OTHER";
             #binding-cells = <0>;
             bindings = <&tdq>, <&kp LG(V)>;
             mods = <(MOD_LGUI)>;
@@ -39,7 +35,6 @@
 
         cmdo: cmdo {
             compatible = "zmk,behavior-mod-morph";
-            label = "CMD_O";
             #binding-cells = <0>;
             bindings = <&kp O>, <&kp DQT>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
